@@ -1,0 +1,19 @@
+# Ignore trained model (hosted on Google Drive)
+random_forest_model.pkl
+
+# Ignore test/intermediate model files
+X_test_sample.pkl
+y_test_sample.pkl
+y_pred_sample.pkl
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore editor folders
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore notebook autosaves
+.ipynb_checkpoints/
