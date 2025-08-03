@@ -7,6 +7,19 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from tensorflow.keras.models import load_model
 
+import os
+import gdown
+import joblib
+
+# === Download model if not exists ===
+model_path = "random_forest_model.pkl"
+if not os.path.exists(model_path):
+    print("🔄 Downloading model from Google Drive...")
+    url = "https://drive.google.com/uc?id=14YzrsoIRHMjC8Zk5kG5Yo2EnrcLFHwlT"
+    gdown.download(url=url, output=model_path, quiet=False, fuzzy=True)
+
+# === Load model ===
+rf_model = joblib.load(model_path)
 
 
 
